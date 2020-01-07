@@ -65,6 +65,7 @@ public class Problem extends AbstractMarker {
 		ProblemsView problemsView = new ProblemsView();
 		List<String> columns = problemsView.getProblemColumns();
 		if (columns.contains(column.toString())) {
+			problemsView.activate();
 			return markerItem.getCell(problemsView.getIndexOfColumn(column));
 		}
 		return null;
